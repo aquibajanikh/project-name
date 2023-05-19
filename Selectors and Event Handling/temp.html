@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Library</title>
+    <style>
+      .book-card {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .book-title {
+        margin-top: 0;
+      }
+
+      .book-author {
+        margin-bottom: 5px;
+      }
+
+      .book-rating {
+        margin-bottom: 5px;
+      }
+
+      .book-actions {
+        margin-top: 5px;
+      }
+
+      .remove-button {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Book Library</h1>
+
+    <!-- Add Book Form -->
+    <h2>Add a Book</h2>
+    <form id="add-book-form">
+      <input type="text" id="book-title" placeholder="Title" required />
+      <input type="text" id="book-author" placeholder="Author" required />
+      <input
+        type="number"
+        id="book-rating"
+        placeholder="Rating (1-5)"
+        min="1"
+        max="5"
+        required
+      />
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Book List -->
+    <h2>Book List</h2>
+    <input type="text" id="search-input" placeholder="Search by Title" />
+    <ul id="book-list">
+      <!-- Books will be dynamically added here -->
+    </ul>
+    <script src="temp.js"></script>
+  </body>
+</html>
