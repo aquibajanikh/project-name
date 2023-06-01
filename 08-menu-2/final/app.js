@@ -1,3 +1,11 @@
+if (import.meta.env.DEV) {
+  import("../api/browser")
+    .then(({ worker }) => worker.start())
+    .then(() => fetch("/allDishes"))
+    .then((res) => res.json())
+    .then((res) => (apiStatus.innerText = res.message));
+}
+
 const menu = [
   {
     id: 1,
